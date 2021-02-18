@@ -4,7 +4,6 @@ import requests
 import pyperclip
 import re
 import pypandoc
-import string
 import pyautogui as pg
 
 
@@ -47,7 +46,7 @@ file = open(story_name+".html", 'w')
 file.write("<html><head></head><body>")
 
 file.write("<br><h1>" + story_name +"</h1><br>BY  <h4>"+author+"</h4><br><b>Tags:</b> "+tags+"<br><br>"+summary+"<br>")
-file.write("<br><br><div align='left'><h6>* If chapter number or names are Jumbled up, its definetely author's fault.(Author-san please Number them correctly and in order.)<br>* Converted using Wattpad2epub By Architrixs<br></h6></div>")
+file.write("<br><br><div align='left'><h6>* If chapter number or names are Jumbled up, its definetely author's fault.(Author please Number them correctly and in order.)<br>* Converted using Wattpad2epub By Architrixs<br></h6></div>")
 
 
 for i in range(len(chapters)):
@@ -78,6 +77,6 @@ pg.alert("saved "+ story_name+".html")
 pg.alert("Generating Epub...")
 
 
-output = pypandoc.convert_file(story_name+".html", 'epub3', outputfile=story_name+".epub", extra_args=['--epub-chapter-level=2'])
+output = pypandoc.convert_file(story_name+".html", 'epub3', outputfile=story_name+".epub", extra_args=['--epub-chapter-level=2'])   #tf don't know why isn't working
 assert output == ""
 print("saved "+ story_name+".epub")

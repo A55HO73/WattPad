@@ -64,7 +64,7 @@ for i in range(len(chapters)):
 	
 
 	file.write("<br><br><h2>Chapter "+str(i+1)+" : '"+ chapters[i]['TITLE'] +"'</h2><br><br>")
-	file.write(str(soup_res.prettify()))
+	file.write(str(soup_res.prettify()))    ##UnicodeEncodeError: 'charmap' codec can't encode character '\u25c7' in position 2602: character maps to <undefined>
 
 file.write("</body></html>")
 

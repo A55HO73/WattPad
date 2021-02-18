@@ -20,7 +20,7 @@ id_no = search_id.search(address)
 
 
 
-res = requests.get("https://www.wattpad.com/apiv2/info?id="+id_no.group(), headers={'User-Agent':'Mozilla/5.0'}
+res = requests.get("https://www.wattpad.com/apiv2/info?id="+id_no.group(), headers={'User-Agent':'Mozilla/5.0'})
 
 try :
     res.raise_for_status()

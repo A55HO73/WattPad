@@ -59,7 +59,7 @@ for i in range(len(chapters)):
 	
 
 	file.write("<br><br><h2>Chapter "+str(i+1)+" : '"+ chapters[i]['TITLE'] +"'</h2><br><br>")
-	file.write(str(soup_res.prettify()))
+	file.write(str(soup_res.prettify().encode('cp1252', errors='ignore')))
 
 file.write("</body></html>")
 
